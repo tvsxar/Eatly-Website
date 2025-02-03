@@ -1,0 +1,181 @@
+@use '../../global.scss' as global;
+
+.header {
+    padding: 2rem 0 4.7rem;
+
+    position: relative;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.9rem;
+
+    border-bottom: 0.03rem solid global.$line-color;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.logo-text {
+    color: global.$accent-color;
+    font-size: 1.3235rem;
+    font-weight: 600;
+    line-height: 130%;
+}
+
+.header-nav {
+    position: relative;
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    cursor: pointer;
+    position: fixed;
+    top: 1.65rem;
+    right: 1.75rem;
+    z-index: 11; 
+
+    .line {
+        background-color: global.$main-color;
+        width: 2rem;
+        height: 0.15rem;
+        border-radius: 1.5625rem;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    &.open {
+        .line:nth-child(1) {
+            transform: translateY(0.5rem) rotate(45deg);
+        }
+    
+        .line:nth-child(2) {
+            opacity: 0;
+        }
+    
+        .line:nth-child(3) {
+            transform: translateY(-0.5rem) rotate(-45deg);
+        }
+    }
+}
+
+.header-content {
+    padding-top: 3.56rem;
+}
+
+.header-text {
+    margin-bottom: 2.58rem;
+}
+
+.subtitle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.header-subtitle {
+    font-size: 0.578rem;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.07706rem;
+}
+
+.header-title {
+    text-align: center;
+    font-size: 2.88994rem;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.11563rem;
+
+    margin-bottom: 1rem;
+}
+
+.header-description {
+    color: global.$description-color;
+    text-align: center;
+    font-family: Inter;
+    font-size: 0.69356rem;
+    font-weight: 400;
+    line-height: 155%;
+}
+
+.purple {
+    color: global.$accent-color;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    margin-bottom: 1.65rem;
+}
+
+.header-rating {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    color: global.$description-color;
+    font-family: "Plus Jakarta Sans";
+    font-size: 0.80069rem;
+    font-weight: 500;
+    line-height: 150%;
+
+    margin-bottom: 3.06rem;
+}
+
+.rating-stars {
+    margin-left: 1rem;
+    margin-right: 0.46rem;
+    margin-bottom: 0.25rem;
+
+    align-items: center;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    backdrop-filter: blur(0.1rem);
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 18rem;
+    height: 100%;
+    background: #fff;
+    box-shadow: -0.125rem 0 0.625rem rgba(0, 0, 0, 0.3);
+    padding: 1.9rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    z-index: 10;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+    
+
+    &.open {
+        transform: translateX(0);
+    }
+}
+
+.mobile-nav-item {
+    color: global.$main-color;
+    font-size: 2rem;
+    transition: color 0.3s;
+}

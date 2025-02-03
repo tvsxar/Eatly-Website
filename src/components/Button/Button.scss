@@ -1,0 +1,19 @@
+@use '../../global.scss' as global;
+
+.button {
+    display: inline-block;
+    border-radius: 0.62106rem;
+    background: global.$accent-color;
+    color: #FFF;
+    font-size: 0.81419rem;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.00813rem;
+    padding: 0.9rem 1.5rem;
+
+    &.transparent {
+        border: 1.201px solid global.$accent-color;
+        background: transparent;
+        color: global.$accent-color;
+    }
+}
