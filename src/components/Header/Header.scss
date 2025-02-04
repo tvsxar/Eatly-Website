@@ -150,6 +150,10 @@
         justify-content: flex-start;
     }
 
+    .header-text {
+        max-width: 34rem;
+    }
+
     .header-title {
         text-align: left;
     }
@@ -174,10 +178,6 @@
 
     .header-title {
         font-size: 3.33331rem;
-    }
-
-    .header-text {
-        max-width: 34rem;
     }
 
     .header-subtitle {
