@@ -4,6 +4,7 @@ $main-color: #201F1F;
 $accent-color: #6C5FBC;
 $description-color: #676767;
 $line-color: #CBCBCB;
+$nav-color: #606060;
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -16,6 +17,30 @@ body {
     max-width: 21.5rem;
     margin: 0 auto;
     padding: 0 1rem;
+
+    @media (min-width: 375px) {
+        max-width: 26rem; 
+    }
+
+    @media (min-width: 425px) {
+        max-width: 46rem;
+        padding: 0 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+        max-width: 54rem;
+        padding: 0 2rem;
+    }
+
+    @media (min-width: 1024px) {
+        max-width: 68rem;
+        padding: 0 3rem;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 78rem;
+        padding: 0 2rem;
+    }
 }
 
 .no-scroll {

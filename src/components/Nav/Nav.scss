@@ -1,0 +1,68 @@
+@use '../../global.scss' as global;
+
+.nav-bar {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 11rem;
+
+    .login-buttons {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.nav-item {
+    color: global.$nav-color;
+    font-family: Inter;
+    font-size: 0.79238rem;
+    font-weight: 500;
+    line-height: 150%;
+
+    &.bold {
+        font-weight: 700;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-bar {
+        display: flex;
+        gap: 13rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav-bar {
+        gap: 20.1rem;
+
+        .login-buttons {
+            gap: 1.5rem;
+        }
+    }
+
+    .nav-menu {
+        gap: 2.4rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .nav-menu {
+        gap: 3.34rem;
+    }
+
+    .nav-bar {
+        gap: 27rem;
+    }
+
+    .nav-item {
+        font-size: 1.11431rem;
+    }
+}
