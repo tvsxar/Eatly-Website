@@ -1,0 +1,45 @@
+.features {
+    background: url('../../assets/images/features-bg.png');
+    background-size: cover;
+    background-position: center center;
+
+    padding: 6.2rem 0 5.1rem;
+}
+
+.features-content {
+    margin: 0 auto;
+    max-width: 15.375rem;
+}
+
+@media (min-width: 768px) {
+    .features {
+        padding: 3.2rem 0 3.1rem;
+    }
+
+    .features-content {
+        display: flex;
+        justify-content: center;
+
+        max-width: 64rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .features {
+        padding: 2.4rem 0 2.4rem;
+    }
+
+    .features-content {
+        max-width: 52rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .features {
+        padding: 3.56rem 0 3.56rem;
+    }
+
+    .features-content {
+        max-width: 68rem;
+    }
+}

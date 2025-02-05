@@ -1,0 +1,79 @@
+.features-title-container {
+    padding: 3.75rem 1rem 3.75rem;
+}
+
+.features-title {
+    color: #FFF;
+    text-align: center;
+    font-family: "Public Sans";
+    font-size: 2.7rem;
+    font-weight: 700;
+    line-height: 125%;
+}
+
+.features-description {
+    color: #C5BFED;
+    text-align: center;
+    font-family: Inter;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 150%; 
+
+    margin-top: 0.7rem;
+}
+
+.item {
+    border-top: 1px solid rgba(197, 197, 197, 0.15);
+    border-bottom: 1px solid rgba(197, 197, 197, 0.15);
+}
+
+@media (min-width: 425px) {
+    .features-title {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .features-title-container {
+        padding: 0rem 2.4rem 0rem;
+    }
+
+    .item {
+        border-left: 1px solid rgba(197, 197, 197, 0.15);
+        border-right: 1px solid rgba(197, 197, 197, 0.15);
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .features-title {
+        font-size: 2.1rem;
+    }
+
+    .features-description {
+        font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .features-title {
+        font-size: 1.9rem;
+    }
+
+    .features-description {
+        font-size: 0.64rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .features-title-container {
+        padding: 0rem 4.14rem 0rem;
+    }
+
+    .features-title {
+        font-size: 2.7rem;
+    }
+
+    .features-description {
+        font-size: 0.9rem;
+    }
+}
