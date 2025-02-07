@@ -1,0 +1,244 @@
+@use '../../global.scss' as global;
+
+.promotion {
+    padding: 4.2rem 0 4.12rem;
+}
+
+.promotion-content {
+    margin: 0 auto;
+    max-width: 18rem;
+}
+
+.promotion-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.25rem;
+    margin-bottom: 6.86rem;
+}
+
+.promotion-title {
+    text-align: center;
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 114.1%;
+}
+
+.promotion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    // list-style-position: inside;
+    list-style-type: disc;
+}
+
+.list-item {
+    color: global.$description-color;
+    font-family: Inter;
+    font-size: 0.7475rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.promotion-button {
+    position: relative;
+
+    &::before {
+        content: '';
+        background-image: url('../../assets/icons/main-arrow.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 3.56006rem;
+        height: 6.32113rem;
+        top: 1.5rem;
+        left: -2.5rem;
+        z-index: 1;
+    }
+}
+
+.promotion-img {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &::after {
+        content: '';
+        background-image: url('../../assets/icons/lines.svg');
+        background-size: contain;
+        position: absolute;
+        width: 1.85rem;
+        height: 2.17rem;
+        top: -0.5rem;
+        right: 1.5rem;
+        z-index: 1;
+    }
+}
+
+.promotion-mobile {
+    max-width: 10.67rem;
+}
+
+@media (min-width: 375px) {
+    .promotion-content {
+        max-width: 20rem;
+    }
+
+    .promotion-title {
+        max-width: 18rem;
+    }
+
+    .promotion-img {
+        &::after {
+            right: 2.5rem;
+        }
+    }
+}
+
+@media (min-width: 425px) {
+    .promotion-title {
+        font-size: 2.2rem;
+        max-width: 20rem;
+    }
+
+    .list-item {
+        font-size: 0.83rem;
+    }
+
+    .promotion-mobile {
+        max-width: 11.67rem;
+    }
+
+    .promotion-img {
+        &::after {
+            right: 2rem;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .promotion-content {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 8rem;
+        max-width: 50rem;
+    }
+
+    .promotion-content {
+        max-width: 50rem;
+    }
+
+    .promotion-info {
+        max-width: 20rem;
+    }
+
+    .promotion-mobile {
+        max-width: 13.5rem;
+    }
+
+    .promotion-img {
+        &::after {
+            right: -2.5rem;
+            width: 2rem;
+            height: 2.32rem;
+        }
+    }
+
+    .promotion-title {
+        text-align: left;
+    }
+
+    .promotion-list {
+        gap: 1.2rem;
+        list-style-position: inside;
+    }
+
+    .promotion-info {
+        align-items: flex-start;
+        justify-content: flex-end;
+        margin-bottom: 4.8rem;
+    }
+
+    .promotion-button {
+        &::before {
+            width: 3.481rem;
+            height: 6.18rem;
+            top: -0.5rem;
+            left: 8rem;
+            transform: rotate(255deg)
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .promotion {
+        padding: 5.3rem 0 5.3rem;
+    }
+
+    .promotion-content {
+        gap: 12.8rem;
+    }
+
+    .promotion-title {
+        font-size: 2.26325rem;
+    }
+
+    .list-item {
+        font-size: 0.90375rem;
+    }
+
+    .promotion-info {
+        gap: 2.9rem;
+        margin-bottom: 3.3rem;
+        max-width: 24rem;
+    }
+
+    .promotion-button {
+        &::before {
+            width: 3.867rem;
+            height: 6.86619rem;
+            top: -0.5rem;
+            left: 8rem;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .promotion {
+        padding: 7.5rem 0 7.5rem;
+    }
+
+    .promotion-mobile {
+        max-width: 19rem;
+    }
+
+    .promotion-content {
+        max-width: 62rem;
+    }
+
+    .promotion-title {
+        max-width: 62rem;
+        font-size: 3.18269rem;
+    }
+
+    .list-item {
+        font-size: 1.27094rem;
+    }
+
+    .promotion-info {
+        max-width: 320rem;
+        margin-bottom: 6rem;
+        gap: 3.94rem;
+    }
+
+    .promotion-button {
+        &::before {
+            width: 5.438rem;
+            height: 9.65556rem;
+            top: -2rem;
+            left: 8.5rem;
+        }
+    }
+}

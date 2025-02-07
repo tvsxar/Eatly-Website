@@ -16,4 +16,10 @@
         background: transparent;
         color: global.$accent-color;
     }
+
+    &.arrow {
+        display: flex;
+        gap: 0.56rem;
+        padding: 0.8rem 1rem;
+    }
 }

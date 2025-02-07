@@ -3,13 +3,10 @@ import './Button.scss';
 function Button({ children }) {
     let className;
 
-    switch(children) {
-        case 'Go Pro':
+    if(children === 'Go Pro') {
         className = 'transparent';
-        break;
-
-        default:
-        className = '';
+    } else if(children.includes('Download')) {
+        className = 'arrow';
     }
 
     return (
