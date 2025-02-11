@@ -1,0 +1,145 @@
+@use '../../global.scss' as global;
+
+@mixin flex-container($direction: row, $align: center, $justify: center, $gap: 0, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+    flex-wrap: $wrap;
+}
+
+.restaurants {
+    padding: 5.25rem 0 4.12rem;
+    border-bottom: 1px solid global.$line-color;
+}
+
+.restaurants-content {
+    @include flex-container(column, center, center, 3.7rem);
+}
+
+.restaurants-title {
+    color: global.$main-color;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-size: 1.875rem;
+    font-weight: 600;
+    line-height: 120%;
+
+    max-width: 18rem;
+}
+
+.restaurants-cards {
+    @include flex-container(column, center, center, 2.5rem, wrap);
+}
+
+.restaurants-btn {
+    @include flex-container(row, end, end);
+    margin: 0 auto;
+    margin-top: 3.7rem;
+    max-width: 20rem;
+}
+
+.restaurants-link {
+    @include flex-container(row, center, flex-start, 1.25rem);
+    
+
+    color: #ACADB9;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-size: 1.25rem;
+    line-height: 225.921%;
+    letter-spacing: -0.00625rem;
+}
+
+@media (min-width: 425px) {
+    .restaurants-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .restaurants {
+        padding: 4.4rem 0 5.3rem;
+    }
+
+    .restaurants-cards {
+        flex-direction: row;
+        gap: 1.35rem;
+    }
+
+    .restaurants-btn {
+        max-width: 36.5rem;
+        margin-top: 2.9rem;
+    }
+
+    .restaurants-title {
+        max-width: 26rem;
+        font-size: 2rem;
+    }
+
+    .restaurants-link {
+        font-size: 1rem;
+        gap: 0.87rem;
+
+        img {
+            position: relative;
+        }
+
+        &:hover {
+            img {
+                animation: slide .5s ease-in-out;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .restaurants-btn {
+        max-width: 56.5rem;
+    }
+
+    .restaurants-link {
+        font-size: 0.88888rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .restaurants {
+        padding: 6.25rem 0 7.5rem;
+    }
+
+    .restaurants-content {
+        gap: 5.36rem;
+    }
+
+    .restaurants-link {
+        font-size: 1.25rem;
+        gap: 1.25rem;
+    }
+
+    .restaurants-btn {
+        max-width: 62rem;
+        margin-top: 4.1rem;
+    }
+
+    .restaurants-cards {
+        gap: 1.9rem;
+    }
+
+    .restaurants-title {
+        max-width: 30rem;
+        font-size: 2.8125rem;
+    }
+}
+
+@keyframes slide {
+    0% {
+        left: 0px;
+    }
+    50% {
+        left: 25px;
+    }
+    100% {
+        left: 0px;
+    }
+}

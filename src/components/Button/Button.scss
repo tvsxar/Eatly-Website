@@ -23,3 +23,36 @@
         padding: 0.8rem 1rem;
     }
 }
+
+@media (min-width: 768px) {
+    .button {
+        font-size: 0.72313rem;
+        transition: transform 0.2s ease;
+
+        &.transparent {
+            font-size: 0.72313rem;
+        }
+
+        &.arrow {
+            font-size: 0.80275rem;
+        }
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .button {
+        font-size: 1rem;
+        
+        &.transparent {
+            font-size: 1rem;
+        }
+
+        &.arrow {
+            font-size: 0.9rem;
+        }
+    }
+}

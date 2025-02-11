@@ -35,13 +35,13 @@
 @media (min-width: 768px) {
     .nav-bar {
         display: flex;
-        gap: 13rem;
+        gap: 11rem;
     }
 }
 
 @media (min-width: 1024px) {
     .nav-bar {
-        gap: 20.1rem;
+        gap: 21rem;
 
         .login-buttons {
             gap: 1.5rem;
@@ -63,6 +63,6 @@
     }
 
     .nav-item {
-        font-size: 1.11431rem;
+        font-size: 1rem;
     }
 }

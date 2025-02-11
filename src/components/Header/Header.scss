@@ -11,6 +11,7 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 1.9rem;
+    position: relative;
 
     border-bottom: 0.03rem solid global.$line-color;
 }
@@ -26,10 +27,6 @@
     font-size: 1.3235rem;
     font-weight: 600;
     line-height: 130%;
-}
-
-.header-nav {
-    position: relative;
 }
 
 .header-content {
@@ -137,6 +134,10 @@
 }
 
 @media (min-width: 768px) {
+    .header-nav {
+        gap: 3rem;
+    }
+
     .header-content {
         flex-direction: row;
         gap: 0.8rem;
@@ -196,6 +197,7 @@
 @media (min-width: 1200px) {
     .header-nav {
         padding-bottom: 1.5rem;
+        gap: 5rem;
     }
 
     .header-title {
