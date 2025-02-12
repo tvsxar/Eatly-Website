@@ -1,0 +1,154 @@
+@use '../../global.scss' as global;
+
+@mixin flex-container($direction: row, $align: center, $justify: center, $gap: 0, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+    flex-wrap: $wrap;
+}
+
+.dishes {
+    padding: 5.3rem 0 4.2rem;
+    border-bottom: 1px solid global.$line-color;
+}
+
+.dishes-content {
+    @include flex-container(column, center, center);
+}
+
+.dishes-title {
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-size: 1.875rem;
+    font-weight: 600;
+    line-height: 120%;
+    max-width: 14rem;
+}
+
+.dishes-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 1.3rem;
+    row-gap: 2.6rem;
+    max-width: 20rem;
+
+    padding: 3.8rem 0 3.8rem;
+}
+
+.dishes-btn {
+    @include flex-container(row, end, end);
+    margin: 0 auto;
+    margin-top: 3.7rem;
+    max-width: 20rem;
+}
+
+.dishes-link {
+    @include flex-container(row, center, flex-start, 1.25rem);
+    
+    color: #ACADB9;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-size: 1.25rem;
+    line-height: 225.921%;
+    letter-spacing: -0.00625rem;
+}
+
+@media (min-width: 425px) {
+    .dishes-cards {
+        max-width: 22rem;
+    }
+
+    .dishes-btn {
+        max-width: 21rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .dishes {
+        padding: 4.4rem 0 5.3rem;
+    }
+
+    .dishes-title {
+        max-width: 22rem;
+        font-size: 2rem;
+    }
+
+    .dishes-cards {
+        max-width: 38rem;
+        padding: 3.3rem 0 2.9rem;
+    }
+
+    .dishes-btn {
+        max-width: 33rem;
+    }
+
+    .dishes-link {
+        font-size: 1rem;
+        gap: 0.87rem;
+
+        img {
+            position: relative;
+        }
+
+        &:hover {
+            img {
+                animation: slide .5s ease-in-out;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .dishes-btn {
+        max-width: 55.5rem;
+    }
+
+    .dishes-link {
+        font-size: 0.88888rem;
+    }
+
+    .dishes-cards {
+        max-width: 58rem;
+        column-gap: 1.6rem;
+        padding: 3.3rem 0 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .dishes {
+        padding: 6.25rem 0 7.5rem;
+    }
+
+    .dishes-cards {
+        max-width: 68rem;
+        column-gap: 1.9rem;
+        padding: 4.7rem 0 0;
+    }
+
+    .dishes-title {
+        font-size: 2.8rem;
+    }
+
+    .dishes-btn {
+        max-width: 62rem;
+    }
+
+    .dishes-link {
+        font-size: 1.25rem;
+        gap: 1.25rem;
+    }
+}
+
+@keyframes slide {
+    0% {
+        left: 0px;
+    }
+    50% {
+        left: 25px;
+    }
+    100% {
+        left: 0px;
+    }
+}

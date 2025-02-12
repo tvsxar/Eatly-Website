@@ -1,0 +1,159 @@
+.dish-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 9.183rem;
+    padding-top: 1rem;
+    border-radius: 1.41369rem;
+    border: 0.942px solid #F4F4F6;
+    box-shadow: 4.479px 53.754px 26.877px 0px rgba(229, 229, 229, 0.70);
+    background: #fff;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 0.89744rem;
+        height: 0.74356rem;
+        background: url('../../assets/icons/heart.svg');
+        top: 0.89rem;
+        right: 0.89rem;
+    }
+}
+
+.none {
+    display: none;
+}
+
+.dish-img {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.dish-card-info {
+    padding: 0 1.12rem 1.24rem 0.94rem;
+}
+
+.dish-card-title {
+    color: #323142;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-size: 0.9425rem;
+    font-weight: 600;
+    line-height: 162.5%;
+}
+
+.dish-card-rating {
+    display: flex;
+    align-items: center;
+
+    color: #8E97A6;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Manrope;
+    font-size: 0.70688rem;
+    font-weight: 400;
+    line-height: 133.333%;
+}
+
+.dish-card-price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.48rem;
+
+    color:#323142;
+    font-family: Manrope;
+    font-size: 1.06031rem;
+    font-weight: 700;
+    line-height: 155.556%;
+
+    .light {
+        color: #8E97A6;
+        font-size: 0.76881rem;
+        font-weight: 600;
+    }
+}
+
+.dish-card-highlight {
+    display: inline;
+    padding: 0.1rem 0.3rem;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-size: 0.46694rem;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 0.19738rem;
+
+    &.red {
+        color: #FB471D;
+        background: #F7C5BA;
+    }
+
+    &.yellow {
+        color: #DAA31A;
+        background: #F7EDD0;
+    }
+
+    &.green {
+        color: #309D5B;
+        background: rgba(51, 172, 100, 0.2);
+    }
+}
+
+@media (min-width: 425px) {
+    .dish-card-container {
+        max-width: 10rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .none {
+        display: flex;
+    }
+
+    .dish-card-highlight {
+        font-size: 0.507rem;
+    }
+
+    .dish-card-title {
+        font-size: 1.024rem;
+        line-height: 162.5%;
+    }
+
+    .dish-card-rating {
+        font-size: 0.7685rem;
+    }
+
+    .card-add-btn {
+        transition: transform 0.2s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .dish-card-container {
+        max-width: 11rem;
+    }
+
+    .dish-card-highlight {
+        font-size: 0.6rem;
+    }
+
+    .dish-card-title {
+        font-size: 1.2rem;
+    }
+
+    .dish-card-rating {
+        font-size: 0.9rem;
+    }
+
+    .dish-card-price {
+        font-size: 1.3rem;
+
+        .light {
+            font-size: 1rem;
+        }
+    }
+}
