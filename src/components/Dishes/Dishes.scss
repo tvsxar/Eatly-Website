@@ -1,6 +1,6 @@
 @use '../../global.scss' as global;
 
-@mixin flex-container($direction: row, $align: center, $justify: center, $gap: 0, $wrap: nowrap) {
+@mixin flex-container($direction: row, $align: center, $justify: center, $gap: unset, $wrap: nowrap) {
     display: flex;
     flex-direction: $direction;
     align-items: $align;
@@ -20,7 +20,6 @@
 
 .dishes-title {
     text-align: center;
-    font-feature-settings: 'liga' off, 'clig' off;
     font-size: 1.875rem;
     font-weight: 600;
     line-height: 120%;
@@ -28,28 +27,22 @@
 }
 
 .dishes-cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    @include flex-container(row, center, center, unset, wrap);
     column-gap: 1.3rem;
     row-gap: 2.6rem;
     max-width: 20rem;
-
-    padding: 3.8rem 0 3.8rem;
+    padding: 3.8rem 0;
 }
 
 .dishes-btn {
     @include flex-container(row, end, end);
-    margin: 0 auto;
-    margin-top: 3.7rem;
+    margin: 3.7rem auto 0;
     max-width: 20rem;
 }
 
 .dishes-link {
     @include flex-container(row, center, flex-start, 1.25rem);
-    
     color: #ACADB9;
-    font-feature-settings: 'liga' off, 'clig' off;
     font-size: 1.25rem;
     line-height: 225.921%;
     letter-spacing: -0.00625rem;
@@ -142,13 +135,7 @@
 }
 
 @keyframes slide {
-    0% {
-        left: 0px;
-    }
-    50% {
-        left: 25px;
-    }
-    100% {
-        left: 0px;
-    }
+    0% { left: 0px; }
+    50% { left: 25px; }
+    100% { left: 0px; }
 }

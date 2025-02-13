@@ -1,0 +1,132 @@
+.dashboard-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.76rem;
+    font-family: Manrope;
+
+    padding: 0.93rem;
+
+    border-radius: 0.69775rem;
+    border: 0.93px solid #EDF2F7;
+}
+
+.dashboard-item-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard-info {
+    display: flex;
+    gap: 0.7rem;
+}
+
+.dashboard-img {
+    max-width: 1.86rem;
+    padding: 0.5rem;
+    border-radius: 58.14781rem;
+
+    &.wallet {
+        background: #F4F0FF;
+    }
+
+    &.money {
+        background: #F2FDF6;
+    }
+}
+
+.dashboard-icon {
+    max-width: 0.9rem;
+} 
+
+.dashboard-item-title {
+    font-size: 0.69775rem;
+    font-weight: 800;
+    line-height: 150%;
+    letter-spacing: 0.02325rem;
+}
+
+.dashboard-item-description {
+    color: #A0AEC0;
+    font-size: 0.5815rem;
+    font-weight: 500;
+}
+
+.dashboard-price {
+    font-weight: 800;
+    font-size: 0.81406rem;
+}
+
+@media (min-width: 768px) {
+    .dashboard-item {
+        padding: 1rem;
+    }
+
+    .dashboard-item-title {
+        font-size: 0.75rem;
+    }
+
+    .dashboard-item-description  {
+        font-size: 0.63rem;
+    }
+
+    .dashboard-price {
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .dashboard-item {
+        padding: 1.12rem;
+        gap: 0.9rem;
+    }
+
+    .dashboard-img {
+        max-width: 2.23rem;
+    }
+
+    .dashboard-icon {
+        max-width: 1.17rem;
+    } 
+
+    .dashboard-item-title {
+        font-size: 0.83763rem;
+    }
+
+    .dashboard-item-description {
+        font-size: 0.69806rem;
+    }
+
+    .dashboard-price {
+        font-size: 0.97725rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .dashboard-item {
+        padding: 1.5rem;
+    }
+
+    .dashboard-img {
+        max-width: 3rem;
+        padding: 0.79rem;
+    }
+
+    .dashboard-icon {
+        max-width: 1.4rem;
+    } 
+
+    .dashboard-item-title {
+        font-size: 0.85rem;
+    }
+
+    .dashboard-item-description {
+        font-size: 0.73rem;
+    }
+
+    .dashboard-price {
+        font-size: 1rem;
+    }
+}

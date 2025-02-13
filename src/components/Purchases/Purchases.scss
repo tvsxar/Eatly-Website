@@ -1,0 +1,262 @@
+@use '../../global.scss' as global;
+
+.purchases {
+    padding: 5.3rem 0 6.6rem;
+    border-bottom: 1px solid global.$line-color;
+}
+
+.purchases-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.66rem;
+    max-width: 20rem;
+
+    margin: 0 auto 6.3rem;
+}
+
+.purchases-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 108.805%;
+}
+
+.purchases-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        background: url('../../assets/icons/main-arrow.svg');
+        background-repeat: no-repeat;
+        width: 3.56006rem;
+        height: 6.32113rem;
+        transform: rotate(155deg);
+        top: 11rem;
+        right: 2rem;
+    }
+}
+
+.purchases-dashboard {
+    max-width: 19.8rem;
+    padding: 1.6rem 1.4rem;
+    box-shadow: 4.479px 53.754px 26.877px 0px rgba(229, 229, 229, 0.70);
+    border-radius: 0.93038rem;
+    border: 0.93px solid #EDF2F7;
+    background: #fff;  
+    font-family: Manrope;
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.4rem;
+}
+
+.dashboard-title {
+    font-size: 1.04669rem;
+    font-weight: 800;
+    line-height: 135%;
+}
+
+.dashboard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.dropbtn {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.25rem;
+
+    font-size: 0.69775rem;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0.02325rem;
+    border-radius: 0.46519rem;
+    background: #FAFAFA;
+
+    padding: 0.47rem 0.7rem;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    .dropdown-content {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #FAFAFA;
+        border-radius: 0.46519rem;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        min-width: 100%;
+        padding: 0.5rem 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10%);
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+
+        li {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 0.7rem;
+            font-weight: 600;
+            &:hover {
+                background: #f0f0f0;
+            }
+        }
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+}
+
+.chevron-down {
+    position: relative;
+    transition: transform 0.3s ease;
+
+    &.active {
+        transform: rotate(180deg);
+    }
+}
+
+@media (min-width: 425px) {
+    .purchases-dashboard {
+        max-width: 21.5rem;
+    }
+
+    .purchases-content {
+        max-width: 21.5rem;
+    }
+
+    .purchases-title {
+        max-width: 20rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .purchases-container {
+        &::after {
+            background: none;
+        }
+    }
+
+    .purchases-flex {
+        display: flex;
+    }
+
+    .purchases-dashboard {
+        max-height: 18.5rem;
+        padding: 1.8rem 1.4rem;
+    }
+
+    .purchases-title {
+        font-size: 2rem;
+    }
+
+    .dashboard-title {
+        font-size: 1.15rem;
+    }
+
+    .dropbtn {
+        font-size: 0.73rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .purchases {
+        padding: 4.4rem 0 6rem;
+    }
+
+    .purchases-container {
+        gap: 0.7rem;
+    }
+
+    .purchases-flex {
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 56rem;
+    }
+
+    .purchases-content {
+        margin: 0;
+    }
+
+    .purchases-dashboard {
+        padding: 1.6rem 1.4rem;
+        margin: 0;
+        max-width: 23.73331rem;
+        max-height: 20.73175rem;
+    }
+
+    .purchases-title {
+        font-size: 2.26325rem;
+        max-width: 30rem;
+    }
+
+    .dashboard-title {
+        font-size: 1.2565rem;
+    }
+
+    .dropbtn {
+        font-size: 0.83763rem;
+    }
+
+    .dashboard-header {
+        margin-bottom: 2rem;
+    }
+
+    .dashboard-content {
+        gap: 1rem;
+    }
+
+    .purchases-content {
+        gap: 2.15rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .purchases {
+        padding: 6.4rem 0 8rem;
+    }
+
+    .purchases-content {
+        gap: 3rem;
+        max-width: 30rem;
+    }
+
+    .purchases-flex {
+        max-width: 62rem;
+    }
+
+    .purchases-title {
+        font-size: 2.35rem;
+        max-width: 26rem;
+    }
+
+    .purchases-dashboard {
+        width: 35rem;
+        max-height: 29.15406rem;
+    }
+
+    .dashboard-title {
+        font-size: 1.5rem;
+    }
+
+    .dashboard-content {
+        gap: 1.1rem;
+    }
+
+    .dashboard-header {
+        margin-bottom: 1.8rem;
+    }
+}

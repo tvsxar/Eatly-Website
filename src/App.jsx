@@ -3,6 +3,7 @@ import Features from './components/Features/Features';
 import Promotion from './components/Promotion/Promotion';
 import Restaurants from './components/Restaurants/Restaurants';
 import Dishes from './components/Dishes/Dishes';
+import Purchases from './components/Purchases/Purchases';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Promotion />
       <Restaurants />
       <Dishes />
+      <Purchases />
     </div>
   )
 }

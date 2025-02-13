@@ -1,7 +1,14 @@
-.dish-card-container {
+@mixin flex-container($direction: row, $align: unset, $justify: unset, $gap: unset, $wrap: nowrap) {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+    flex-wrap: $wrap;
+}
+
+.dish-card-container {
+    @include flex-container(column);
 
     max-width: 9.183rem;
     padding-top: 1rem;
@@ -14,11 +21,12 @@
     &::after {
         content: '';
         position: absolute;
-        width: 0.89744rem;
-        height: 0.74356rem;
+        width: 0.935rem;
+        height: 0.8rem;
         background: url('../../assets/icons/heart.svg');
         top: 0.89rem;
         right: 0.89rem;
+        cursor: pointer;
     }
 }
 
@@ -36,19 +44,15 @@
 }
 
 .dish-card-title {
-    color: #323142;
-    font-feature-settings: 'liga' off, 'clig' off;
     font-size: 0.9425rem;
     font-weight: 600;
     line-height: 162.5%;
 }
 
 .dish-card-rating {
-    display: flex;
-    align-items: center;
+    @include flex-container(row, center);
 
     color: #8E97A6;
-    font-feature-settings: 'liga' off, 'clig' off;
     font-family: Manrope;
     font-size: 0.70688rem;
     font-weight: 400;
@@ -56,11 +60,9 @@
 }
 
 .dish-card-price {
-    display: flex;
-    justify-content: space-between;
+    @include flex-container(row, unset, space-between);
     margin-top: 0.48rem;
 
-    color:#323142;
     font-family: Manrope;
     font-size: 1.06031rem;
     font-weight: 700;
@@ -76,7 +78,6 @@
 .dish-card-highlight {
     display: inline;
     padding: 0.1rem 0.3rem;
-    font-feature-settings: 'liga' off, 'clig' off;
     font-size: 0.46694rem;
     font-weight: 400;
     line-height: normal;
