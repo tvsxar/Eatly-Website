@@ -4,6 +4,7 @@ import Promotion from './components/Promotion/Promotion';
 import Restaurants from './components/Restaurants/Restaurants';
 import Dishes from './components/Dishes/Dishes';
 import Purchases from './components/Purchases/Purchases';
+import Feedback from './components/Feedback/Feedback';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Restaurants />
       <Dishes />
       <Purchases />
+      <Feedback />
     </div>
   )
 }

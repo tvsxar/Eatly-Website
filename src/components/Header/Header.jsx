@@ -7,7 +7,7 @@ import eatlyLogo from '../../assets/logos/eatly-logo.svg';
 import line from '../../assets/others/header-line.svg';
 import ratingLogo from '../../assets/logos/trustpilot-logo.svg';
 import stars from '../../assets/others/stars.svg';
-import headerImg from '../../assets/images/header-img.jpg';
+import headerImg from '../../assets/images/header-img.png';
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

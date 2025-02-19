@@ -1,0 +1,47 @@
+.review-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 19.662rem;
+
+    background: #fff;
+    border-radius: 0.78rem;
+    // box-shadow: 5px 20px 10px 20px rgba(229, 229, 229, 0.70);
+    padding: 1.4rem 1.6rem;
+}
+
+.review-card-description {
+    color: #969696;
+    text-align: justify;
+    font-size: 0.67031rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 145.094%;
+}
+
+.review-card-raiting {
+    width: 5.139rem;
+}
+
+@media (min-width: 425px) {
+    .review-card {
+        max-width: 21.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .review-card {
+        max-width: 23.5rem;
+        padding: 1.7rem 1.9rem;
+    }
+
+    .review-card-description {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1200px) {
+
+}
