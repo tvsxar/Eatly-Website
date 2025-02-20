@@ -10,6 +10,7 @@ import stars from '../../assets/others/stars.svg';
 
 // components
 import ReviewCard from '../ReviewCard/ReviewCard';
+import Discount from '../Discount/Discount';
 
 function Feedback() {
     const [progress, setProgress] = useState(0);
@@ -107,6 +108,10 @@ function Feedback() {
                     </div>
 
                     </div>
+                </div>
+
+                <div className="discount-container">
+                        <Discount />
                 </div>
             </div>
         </section>

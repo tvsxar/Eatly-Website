@@ -1,5 +1,5 @@
 .feedback {
-    padding: 5.6rem 0 5rem;
+    padding: 5.6rem 0 12rem;
 }
 
 .feedback-title {
@@ -109,6 +109,11 @@
     transition: width 0.1s ease-out;
 }
 
+.discount-container {
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+
 @media (min-width: 425px) {
     .review-card-main {
         max-width: 21.5rem;
@@ -139,12 +144,6 @@
     .reviews {
         padding: 0;
     }
-
-    // .review-card-main {
-    //     &.static {
-    //         box-shadow: 4px 30px 26px 30px rgba(229, 229, 229, 0.70);
-    //     }
-    // }
 }
 
 @media (min-width: 1024px) {
